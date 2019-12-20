@@ -11,3 +11,6 @@ djangorestframework = "*"
 
 [requires]
 python_version = "3.7"
+
+[scripts]
+test = "python manage.py test"
