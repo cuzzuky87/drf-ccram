@@ -12,8 +12,10 @@ class CustomUserManager(BaseUserManager):
         user.set_password(password)
         user.save(using=self._db)
 
+        return user
 
-class CustomUser(AbstractBaseUser):
+
+class CustomUser(AbstractBaseUser,PermissionsMixin):
     """Custom user model taht supports using email instead of username,using uuid for id """
     id = models.UUIDField(primary_key=True,default=uuid.uuid4,editable=False)
     email = models.EmailField(max_length=255,unique=True)

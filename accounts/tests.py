@@ -20,8 +20,8 @@ class ModelTest(TestCase):
     def test_new_user_invalid_email(self):
         """Test the email for a new user is normalized"""
 
-        email = "test@gmail.com"
-        user = get_user_model().objects.creating(email,"test123")
+        email = "test@GMAIL.com"
+        user = get_user_model().objects.create(email,"test123")
         self.assertEqual(user.email, email.lower())
     
     def test_create_new_superuser(self):
