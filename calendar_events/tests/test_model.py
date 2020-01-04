@@ -2,7 +2,7 @@ from django.test import TestCase
 from django.contrib.auth import get_user_model
 from django.utils import timezone
 
-from cal_events.models import CalendarEvent
+from calendar_events.models import CalendarEvent
 
 def sample_user(email="test@gmail.com", password="TestP4ssw0rd"):
     """Create a test user"""

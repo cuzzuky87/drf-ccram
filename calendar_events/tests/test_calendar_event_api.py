@@ -5,10 +5,10 @@ from rest_framework import status
 from rest_framework.test import APIClient
 from django.utils import timezone
 
-from cal_events.models import CalendarEvent
-from cal_events.serializers import CalendarEventSerializer
+from calendar_events.models import CalendarEvent
+from calendar_events.serializers import CalendarEventSerializer
 
-CALENDAR_EVENT_URL = reverse('cal_events:calendarevent-list')
+CALENDAR_EVENT_URL = reverse('calendar_events:calendarevent-list')
 
 class PublicCalendarEventApiTest(TestCase):
     """Test the publicly available calendar event api"""
