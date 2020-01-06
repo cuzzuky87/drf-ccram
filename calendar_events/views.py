@@ -11,4 +11,3 @@ from calendar_events.models import CalendarEvent
 class CalendarEventViewSet(ModelViewSet):
     serializer_class = CalendarEventSerializer
     queryset = CalendarEvent.objects.all()
-    authentication_classes = (TokenAuthentication,)
